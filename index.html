@@ -27,13 +27,13 @@
       <div class="hero-text">
         <h1>Grow your business with Rev’s reels</h1>
         <p>
-          Done‑for‑you short‑form videos that bring you views, leads,
+          Done for you, short-form videos that bring you views, leads,
           and real revenue.
         </p>
         <div class="hero-actions">
           <a href="#contact" class="btn primary">Book a free 15‑min call</a>
           <a href="https://wa.me/919994088393" class="btn ghost">
-            Or WhatsApp Rev now
+            Or WhatsApp Rev's now
           </a>
         </div>
       </div>
@@ -43,7 +43,7 @@
           <div class="phone-screen">
             <div class="reel-card">
               <span class="reel-tag">Reel preview</span>
-              <p>Swipe‑worthy clips that keep your brand in front of customers.</p>
+              <p>Swipe worthy clips that keep your brand in front of customers.</p>
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@
       <div class="grid-3">
         <article class="card">
           <h3>Starter</h3>
-          <p class="card-sub">4 reels / month</p>
+          <p class="card-sub">4+ reels / month</p>
           <ul class="card-list">
             <li>Basic editing & captions</li>
             <li>Simple monthly content plan</li>
@@ -95,7 +95,7 @@
         </article>
         <article class="card card-highlight">
           <h3>Growth</h3>
-          <p class="card-sub">8 reels / month</p>
+          <p class="card-sub">8+ reels / month</p>
           <ul class="card-list">
             <li>Hooks, captions & posting support</li>
             <li>Content calendar for the month</li>
@@ -138,14 +138,14 @@
       <p class="section-intro">
         Share your details and get ideas for your first 3 reels on a free call.
       </p>
-      <form class="form" id="leadForm"  method="POST">
+      <form class="form" id="leadForm" target="_blank" action="https://formsubmit.co/revanthleonardo@gmail.com" method="POST">
         <div class="form-row">
-          <input type="text" id="name" placeholder="Name" required />
-          <input type="text" id="business" placeholder="Business name" required />
+          <input type="text" id="name" placeholder="Name" class="form-control" required />
+          <input type="text" id="business" placeholder="Business name" class="form-control" required />
         </div>
         <div class="form-row">
-          <input type="text" id="instagram" placeholder="Instagram handle" required/>
-          <input type="text" id="contactInfo" placeholder="WhatsApp or Email" required />
+          <input type="text" id="instagram" class="form-control" placeholder="Instagram handle" required/>
+          <input type="text" id="contactInfo" placeholder="WhatsApp or Email" class="form-control" required />
         </div>
         <button type="submit" class="btn primary full">Get my free reel ideas</button>
         <p class="form-note" id="formMessage"></p>
@@ -166,21 +166,5 @@
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    fetch("https://formsubmit.co/ajax/revanthleonardo@gmail.com", {
-    method: "POST",
-    headers: { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-    },
-    body: JSON.stringify({
-        name: "FormSubmit",
-        message: "I'm from with Rev's"
-    })
-})
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error));
-  </script>
 </body>
 </html>
