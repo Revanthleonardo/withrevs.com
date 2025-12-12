@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WithRevs – Reels that bring revenue</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav-logo">WithRevs</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#top">Home</a>
+      <a href="#features">What you get</a>
+      <a href="#pricing">Plans</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main id="top">
+    <section class="section hero">
+      <div class="hero-text">
+        <h1>Grow your business with Rev’s reels</h1>
+        <p>
+          Done‑for‑you short‑form videos that bring you views, leads,
+          and real revenue.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn primary">Book a free 15‑min call</a>
+          <a href="https://wa.me/91XXXXXXXXXX" class="btn ghost">
+            Or WhatsApp Rev now
+          </a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="reel-card">
+              <span class="reel-tag">Reel preview</span>
+              <p>Swipe‑worthy clips that keep your brand in front of customers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section class="section section-light" id="features">
+      <h2>Reels that work, not just look good</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Strategic ideas</h3>
+          <p>Content planned around your niche, offers, and ideal customers.</p>
+        </article>
+        <article class="card">
+          <h3>Done‑for‑you execution</h3>
+          <p>Scripts, shoot guidance, and editing handled end‑to‑end.</p>
+        </article>
+        <article class="card">
+          <h3>Clear analytics</h3>
+          <p>Simple monthly reports so you know what is performing best.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- WHO IT’S FOR -->
+    <section class="section">
+      <h2>Perfect for busy business owners</h2>
+      <div class="chip-row">
+        <span class="chip">Shops & salons</span>
+        <span class="chip">Trainers & coaches</span>
+        <span class="chip">Clinics & studios</span>
+        <span class="chip">Local product brands</span>
+      </div>
+    </section>
+
+    <!-- PLANS -->
+    <section class="section section-light" id="pricing">
+      <h2>Pick your reel plan</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Starter</h3>
+          <p class="card-sub">4 reels / month</p>
+          <ul class="card-list">
+            <li>Basic editing & captions</li>
+            <li>Simple monthly content plan</li>
+            <li>Ideal to start showing up online</li>
+          </ul>
+        </article>
+        <article class="card card-highlight">
+          <h3>Growth</h3>
+          <p class="card-sub">8 reels / month</p>
+          <ul class="card-list">
+            <li>Hooks, captions & posting support</li>
+            <li>Content calendar for the month</li>
+            <li>Best for brands ready to grow</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Club</h3>
+          <p class="card-sub">12+ reels / month</p>
+          <ul class="card-list">
+            <li>Strategy calls & advanced editing</li>
+            <li>Priority revisions</li>
+            <li>Custom needs for serious brands</li>
+          </ul>
+        </article>
+      </div>
+      <div class="center">
+        <a href="#contact" class="btn primary">Get pricing on a call</a>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="section">
+      <h2>Clients who already trust Rev</h2>
+      <div class="grid-2">
+        <figure class="quote">
+          <p>“We started getting more views and real enquiries within the first month.”</p>
+          <figcaption>— Local salon owner</figcaption>
+        </figure>
+        <figure class="quote">
+          <p>“Our page finally looks active and professional without us chasing editors.”</p>
+          <figcaption>— Fitness coach</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-light" id="contact">
+      <h2>Ready for better reels?</h2>
+      <p class="section-intro">
+        Share your details and get ideas for your first 3 reels on a free call.
+      </p>
+      <form class="form" id="leadForm">
+        <div class="form-row">
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="text" id="business" placeholder="Business name" required />
+        </div>
+        <div class="form-row">
+          <input type="text" id="instagram" placeholder="Instagram handle" />
+          <input type="text" id="contactInfo" placeholder="WhatsApp or Email" required />
+        </div>
+        <button type="submit" class="btn primary full">Get my free reel ideas</button>
+        <p class="form-note" id="formMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>© <span id="year"></span> WithRevs</div>
+    <div>
+      <a href="mailto:hello@withrevs.com">hello@withrevs.com</a>
+      <span> · </span>
+      <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">
+        Instagram
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
