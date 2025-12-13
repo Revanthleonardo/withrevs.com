@@ -173,9 +173,9 @@
   <script src="script.js"></script>
   <script>
     const audio = document.getElementById("bg-audio");
+    audio.volume = 0.15; // 15% volume
 
     function enableAudioOnce() {
-      // remove listener immediately so it runs only once
       window.removeEventListener("click", enableAudioOnce);
       window.removeEventListener("touchstart", enableAudioOnce);
 
@@ -184,7 +184,6 @@
       });
     }
 
-    // first user gesture anywhere on page
     window.addEventListener("click", enableAudioOnce, { once: true });
     window.addEventListener("touchstart", enableAudioOnce, { once: true });
 
