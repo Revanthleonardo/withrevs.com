@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Plans – WithRevs</title>
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <style>
     :root {
       --bg: #050716;
@@ -186,14 +185,8 @@
       color: var(--muted);
       margin-bottom: 8px;
     }
-    .plan-title {
-      font-size: 1.2rem;
-      margin-bottom: 4px;
-    }
-    .plan-price {
-      font-size: 1.7rem;
-      font-weight: 700;
-    }
+    .plan-title { font-size: 1.2rem; margin-bottom: 4px; }
+    .plan-price { font-size: 1.7rem; font-weight: 700; }
     .plan-price span {
       font-size: 0.9rem;
       font-weight: 400;
@@ -250,6 +243,7 @@
       margin: 0 0 6px;
     }
     .extras-grid { display: grid; gap: 14px; }
+
     .pill-card {
       border-radius: 16px;
       border: 1px solid rgba(148, 163, 184, 0.35);
@@ -257,7 +251,6 @@
       padding: 14px 16px;
       font-size: 0.86rem;
       color: var(--muted);
-      padding: 14px 16px;
     }
     .pill-title {
       font-weight: 600;
@@ -290,6 +283,8 @@
       font-size: 0.8rem;
       color: var(--muted);
     }
+    .policy-grid { display: grid; gap: 14px; }
+
     footer {
       border-top: 1px solid rgba(148, 163, 184, 0.25);
       margin-top: 40px;
@@ -306,6 +301,9 @@
       }
       .extras-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .policy-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
     }
   </style>
@@ -476,78 +474,85 @@
       </div>
     </section>
 
-    <!-- POLICIES -->
+    <!-- POLICIES GRID -->
     <section class="section" id="policies">
       <h2>Revisions, cancellations & payment</h2>
       <p>Clean, transparent terms so you know exactly what to expect.</p>
 
-      <div class="pill-card">
-        <div class="pill-title">Revision limits</div>
-        <table class="policy-table">
-          <tr>
-            <th>Plan</th>
-            <th>Included revisions</th>
-          </tr>
-          <tr>
-            <td>Starter</td>
-            <td>1 revision per reel</td>
-          </tr>
-          <tr>
-            <td>Growth</td>
-            <td>2 revisions per reel</td>
-          </tr>
-          <tr>
-            <td>Club</td>
-            <td>Unlimited revisions until approval</td>
-          </tr>
-        </table>
-        <p class="notice">
-          Concept changes or completely new ideas after editing starts may be billed as
-          new reels.
-        </p>
+      <div class="policy-grid">
+        <!-- Revisions -->
+        <div class="pill-card">
+          <div class="pill-title">Revision limits</div>
+          <table class="policy-table">
+            <tr>
+              <th>Plan</th>
+              <th>Included revisions</th>
+            </tr>
+            <tr>
+              <td>Starter</td>
+              <td>1 revision per reel</td>
+            </tr>
+            <tr>
+              <td>Growth</td>
+              <td>2 revisions per reel</td>
+            </tr>
+            <tr>
+              <td>Club</td>
+              <td>Unlimited revisions until approval</td>
+            </tr>
+          </table>
+          <p class="notice">
+            Concept changes or completely new ideas after editing starts may be billed as
+            new reels.
+          </p>
+        </div>
+
+        <!-- Cancellation -->
+        <div class="pill-card">
+          <div class="pill-title">Cancellation & refunds</div>
+          <table class="policy-table">
+            <tr>
+              <th>When you cancel</th>
+              <th>Refund</th>
+            </tr>
+            <tr>
+              <td>Before first reel delivery</td>
+              <td>100% refund</td>
+            </tr>
+            <tr>
+              <td>After 1–2 reels delivered</td>
+              <td>50% refund of remaining month</td>
+            </tr>
+            <tr>
+              <td>After 2+ reels delivered</td>
+              <td>No refund for that month</td>
+            </tr>
+          </table>
+          <p class="notice">
+            Month‑to‑month subscription. 7‑day written notice required to stop from the next cycle.
+          </p>
+        </div>
+
+        <!-- Payment -->
+        <div class="pill-card">
+          <div class="pill-title">Payment terms</div>
+          <p>
+            First month is billed in full upfront. From month two, invoices are due on
+            the <span class="pill-strong">1st of each month</span>.
+          </p>
+          <p>
+            Late payments may incur a
+            <span class="pill-strong">5% weekly fee</span>. GST (18%) is applied as
+            per regulations.
+          </p>
+          <p>
+            Preferred methods: UPI and bank transfer. Card payments may include
+            gateway fees.
+          </p>
+        </div>
       </div>
 
-      <div class="pill-card">
-        <div class="pill-title">Cancellation & refunds</div>
-        <table class="policy-table">
-          <tr>
-            <th>When you cancel</th>
-            <th>Refund</th>
-          </tr>
-          <tr>
-            <td>Before first reel delivery</td>
-            <td>100% refund</td>
-          </tr>
-          <tr>
-            <td>After 1–2 reels delivered</td>
-            <td>50% refund of remaining month</td>
-          </tr>
-          <tr>
-            <td>After 2+ reels delivered</td>
-            <td>No refund for that month</td>
-          </tr>
-        </table>
-        <p class="notice">
-          Month‑to‑month subscription. 7‑day written notice required to stop from the
-          next cycle.
-        </p>
-      </div>
-
-      <div class="pill-card">
-        <div class="pill-title">Payment terms</div>
-        <p>
-          First month is billed in full upfront. From month two, invoices are due on
-          the <span class="pill-strong">1st of each month</span>.
-        </p>
-        <p>
-          Late payments may incur a
-          <span class="pill-strong">5% weekly fee</span>. GST (18%) is applied as
-          per regulations.
-        </p>
-        <p>Preferred methods: UPI, bank transfer. Card payments may include gateway fees.</p>
-      </div>
-
-      <div class="pill-card">
+      <div class="pill-card" style="margin-top:14px;">
         <div class="pill-title">Confidentiality</div>
         <p>
           All scripts, footage, unreleased reels, pricing and performance data
@@ -562,8 +567,7 @@
     <section class="section" id="contact">
       <h2>Not sure which plan fits?</h2>
       <p>
-        Share your handle and goals—we'll recommend a plan and send your WhatsApp
-        catalog link.
+        Share your handle and goals—we'll recommend a plan.
       </p>
       <div class="hero-cta">
         <a href="mailto:withrevs@gmail.com" class="btn btn-primary">
@@ -577,7 +581,7 @@
   </main>
 
   <footer>
-    © <span id="year"></span> WithRevs · Coimbatore, Tamil Nadu ·
+    © <span id="year"></span> Rev's 
     Reels. Revenue. Repeat.
   </footer>
 
