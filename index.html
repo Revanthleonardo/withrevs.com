@@ -31,6 +31,9 @@
         <p>
           Done for you, short-form videos that bring you views, leads,
           and real revenue.
+          <audio id="bg-audio">
+            <source src="chery_chery_lady.mp3" type="audio/mpeg" />
+          </audio>
         </p>
         <div class="hero-actions">
           <a href="#contact" class="btn primary">Book a free 15‑min call</a>
@@ -168,5 +171,23 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const audio = document.getElementById("bg-audio");
+
+    function enableAudioOnce() {
+      // remove listener immediately so it runs only once
+      window.removeEventListener("click", enableAudioOnce);
+      window.removeEventListener("touchstart", enableAudioOnce);
+
+      audio.play().catch((err) => {
+        console.error("Audio play blocked:", err);
+      });
+    }
+
+    // first user gesture anywhere on page
+    window.addEventListener("click", enableAudioOnce, { once: true });
+    window.addEventListener("touchstart", enableAudioOnce, { once: true });
+
+  </script>
 </body>
 </html>
