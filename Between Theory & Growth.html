@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Between Theory & Growth - Podcast Opportunity</title>
+    <style>
+        :root {
+            --color-cream-50: rgba(252, 252, 249, 1);
+            --color-cream-100: rgba(255, 255, 253, 1);
+            --color-gray-200: rgba(245, 245, 245, 1);
+            --color-gray-300: rgba(167, 169, 169, 1);
+            --color-slate-500: rgba(98, 108, 113, 1);
+            --color-slate-900: rgba(19, 52, 59, 1);
+            --color-teal-500: rgba(33, 128, 141, 1);
+            --color-teal-600: rgba(29, 116, 128, 1);
+            --color-teal-700: rgba(26, 104, 115, 1);
+            
+            --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-size-base: 14px;
+            --font-size-lg: 16px;
+            --font-size-xl: 18px;
+            --font-size-2xl: 20px;
+            --font-size-3xl: 24px;
+            --font-size-4xl: 30px;
+            --font-weight-normal: 400;
+            --font-weight-semibold: 550;
+            --font-weight-bold: 600;
+            --space-8: 8px;
+            --space-12: 12px;
+            --space-16: 16px;
+            --space-20: 20px;
+            --space-24: 24px;
+            --space-32: 32px;
+            --radius-base: 8px;
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: var(--font-family-base);
+            background-color: var(--color-cream-50);
+            color: var(--color-slate-900);
+            line-height: 1.5;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            border-bottom: 1px solid rgba(33, 128, 141, 0.1);
+            padding: var(--space-16) var(--space-32);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            box-shadow: var(--shadow-md);
+        }
+
+        .logo {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-teal-500);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--space-24);
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-slate-500);
+            text-decoration: none;
+            font-size: var(--font-size-base);
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--color-teal-500);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--color-teal-500) 0%, var(--color-teal-600) 100%);
+            color: white;
+            padding: 80px var(--space-32) 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: var(--font-size-4xl);
+            margin-bottom: var(--space-16);
+            font-weight: var(--font-weight-bold);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: var(--font-size-lg);
+            max-width: 600px;
+            margin: 0 auto var(--space-20);
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--color-teal-600);
+            padding: var(--space-12) var(--space-24);
+            border-radius: var(--radius-base);
+            text-decoration: none;
+            font-weight: var(--font-weight-semibold);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: var(--font-size-base);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Content Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: var(--space-32);
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: var(--space-32);
+            scroll-margin-top: 80px;
+        }
+
+        .section h2 {
+            font-size: var(--font-size-3xl);
+            margin-bottom: var(--space-16);
+            color: var(--color-slate-900);
+            border-bottom: 3px solid var(--color-teal-500);
+            padding-bottom: var(--space-12);
+        }
+
+        .section h3 {
+            font-size: var(--font-size-xl);
+            margin-top: var(--space-20);
+            margin-bottom: var(--space-12);
+            color: var(--color-teal-600);
+        }
+
+        .section p {
+            margin-bottom: var(--space-16);
+            line-height: 1.6;
+            color: var(--color-slate-500);
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: rgba(33, 128, 141, 0.08);
+            border-left: 4px solid var(--color-teal-500);
+            padding: var(--space-20);
+            margin: var(--space-16) 0;
+            border-radius: var(--radius-base);
+        }
+
+        .highlight-box strong {
+            color: var(--color-teal-600);
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--space-16) 0;
+            background: white;
+            border-radius: var(--radius-base);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        th {
+            background: var(--color-teal-500);
+            color: white;
+            padding: var(--space-12);
+            text-align: left;
+            font-weight: var(--font-weight-semibold);
+            font-size: var(--font-size-base);
+        }
+
+        td {
+            padding: var(--space-12);
+            border-bottom: 1px solid var(--color-gray-200);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background: var(--color-cream-100);
+        }
+
+        /* Cards Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-20);
+            margin: var(--space-16) 0;
+        }
+
+        .card {
+            background: white;
+            padding: var(--space-20);
+            border-radius: var(--radius-base);
+            border: 1px solid rgba(33, 128, 141, 0.1);
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(33, 128, 141, 0.15);
+            border-color: var(--color-teal-500);
+        }
+
+        .card h4 {
+            color: var(--color-teal-600);
+            margin-bottom: var(--space-12);
+            font-size: var(--font-size-lg);
+        }
+
+        .card p {
+            color: var(--color-slate-500);
+            font-size: var(--font-size-base);
+            margin-bottom: 0;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-16);
+            margin: var(--space-16) 0;
+        }
+
+        .stat {
+            background: white;
+            padding: var(--space-20);
+            border-radius: var(--radius-base);
+            text-align: center;
+            border: 2px solid var(--color-teal-500);
+        }
+
+        .stat-number {
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-teal-600);
+            margin-bottom: var(--space-8);
+        }
+
+        .stat-label {
+            color: var(--color-slate-500);
+            font-size: var(--font-size-base);
+        }
+
+        /* Checklist */
+        .checklist {
+            list-style: none;
+            margin: var(--space-16) 0;
+        }
+
+        .checklist li {
+            padding: var(--space-12) 0;
+            padding-left: var(--space-32);
+            position: relative;
+            color: var(--color-slate-500);
+            border-bottom: 1px solid var(--color-gray-200);
+        }
+
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-teal-500);
+            font-weight: var(--font-weight-bold);
+            font-size: var(--font-size-lg);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            margin: var(--space-20) 0;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: var(--space-20);
+            margin-bottom: var(--space-20);
+            padding-bottom: var(--space-20);
+            border-bottom: 1px solid var(--color-gray-200);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-label {
+            background: var(--color-teal-500);
+            color: white;
+            padding: var(--space-12);
+            border-radius: var(--radius-base);
+            text-align: center;
+            font-weight: var(--font-weight-semibold);
+            font-size: var(--font-size-base);
+        }
+
+        .timeline-content {
+            background: var(--color-cream-100);
+            padding: var(--space-16);
+            border-radius: var(--radius-base);
+            border-left: 4px solid var(--color-teal-500);
+        }
+
+        .timeline-content p {
+            margin-bottom: 0;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: white;
+            margin-bottom: var(--space-16);
+            border-radius: var(--radius-base);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .faq-question {
+            background: var(--color-teal-500);
+            color: white;
+            padding: var(--space-16);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: var(--font-weight-semibold);
+            user-select: none;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--color-teal-600);
+        }
+
+        .faq-toggle {
+            font-size: var(--font-size-xl);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: var(--space-16);
+            color: var(--color-slate-500);
+            background: var(--color-cream-100);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-slate-900);
+            color: white;
+            padding: var(--space-32);
+            text-align: center;
+            margin-top: var(--space-32);
+        }
+
+        footer p {
+            margin: var(--space-8) 0;
+            font-size: var(--font-size-base);
+        }
+
+        footer a {
+            color: var(--color-teal-300);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: var(--space-16);
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: var(--space-12);
+                text-align: center;
+            }
+
+            .hero {
+                padding: 40px var(--space-16);
+            }
+
+            .hero h1 {
+                font-size: var(--font-size-3xl);
+            }
+
+            .container {
+                padding: var(--space-16);
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-label {
+                text-align: left;
+            }
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Utility */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-32 {
+            margin-top: var(--space-32);
+        }
+
+        .mb-32 {
+            margin-bottom: var(--space-32);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🎙️ Between Theory & Growth</div>
+        <ul class="nav-links">
+            <li><a href="#opportunity" class="nav-link">Opportunity</a></li>
+            <li><a href="#revenue" class="nav-link">Revenue</a></li>
+            <li><a href="#timeline" class="nav-link">Timeline</a></li>
+            <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Between Theory & Growth</h1>
+        <p>A Podcast Opportunity That Amplifies Your Voice and Creates Sustainable Income</p>
+        <button class="cta-button" onclick="document.getElementById('opportunity').scrollIntoView()">Explore Opportunity</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Executive Summary -->
+        <div class="section">
+            <h2>Executive Summary</h2>
+            <div class="highlight-box">
+                <p><strong>Opportunity:</strong> Build a podcast on Queer Studies and critical social theory that reaches [AUDIENCE_REACH]/month.</p>
+                <p><strong>Who:</strong> You (voice, ideas, direction) + Me (business, tech, promotion)</p>
+                <p><strong>Financial:</strong> [YEAR1_MIN]-[YEAR1_MAX] Year 1 for you. [YEAR2_MIN]-[YEAR2_MAX]/year by Year 2.</p>
+                <p><strong>Time:</strong> [HOURS_MIN]-[HOURS_MAX] hours/week (less than one college course)</p>
+                <p><strong>Niche:</strong> Educational podcasting on Queer Studies is basically nonexistent in India. You could own this space.</p>
+            </div>
+        </div>
+
+        <!-- Your Assets -->
+        <div class="section" id="opportunity">
+            <h2>Why You're Perfect</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h4>PhD Expertise</h4>
+                    <p>Real credential in Queer Studies with deep knowledge</p>
+                </div>
+                <div class="card">
+                    <h4>Teaching Skill</h4>
+                    <p>Know how to explain complex ideas clearly</p>
+                </div>
+                <div class="card">
+                    <h4>Rare Voice</h4>
+                    <p>Analyze systems, not individuals</p>
+                </div>
+                <div class="card">
+                    <h4>Existing Platform</h4>
+                    <p>[LINKEDIN_FOLLOWERS] LinkedIn followers + [CONNECTIONS]+ connections</p>
+                </div>
+                <div class="card">
+                    <h4>Perfect Timing</h4>
+                    <p>3-year PhD timeline to build sustainably</p>
+                </div>
+                <div class="card">
+                    <h4>Authentic Voice</h4>
+                    <p>Your ideas actually matter, not generic content</p>
+                </div>
+            </div>
+
+            <h3>The Market Gap</h3>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">[GROWTH_RATE]</div>
+                    <div class="stat-label">Educational Podcasting Growth/Year in India</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Major Voices on Queer Studies in Indian Podcasting</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Opportunity to Own This Space</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Revenue Model -->
+        <div class="section" id="revenue">
+            <h2>Revenue Model</h2>
+            <h3>Multiple Income Streams</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Stream</th>
+                        <th>Timeline</th>
+                        <th>Your Share</th>
+                        <th>Potential/Month</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>YouTube Ad Revenue</td>
+                        <td>Month 3-4</td>
+                        <td>[YOUTUBE_SHARE]</td>
+                        <td>[YOUTUBE_POTENTIAL]</td>
+                    </tr>
+                    <tr>
+                        <td>Sponsorships</td>
+                        <td>Month 6-8</td>
+                        <td>[SPONSOR_SHARE]</td>
+                        <td>[SPONSOR_POTENTIAL]</td>
+                    </tr>
+                    <tr>
+                        <td>Patreon (Optional)</td>
+                        <td>Month 9-12</td>
+                        <td>[PATREON_SHARE]</td>
+                        <td>[PATREON_POTENTIAL]</td>
+                    </tr>
+                    <tr>
+                        <td>Digital Products</td>
+                        <td>Whenever</td>
+                        <td>[PRODUCT_SHARE]</td>
+                        <td>[PRODUCT_POTENTIAL]</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Year 1 Income Breakdown (For You)</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-label">Month 1-2</div>
+                    <div class="timeline-content">
+                        <p><strong>₹0</strong> - Building audience (no monetization yet)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-label">Month 3-4</div>
+                    <div class="timeline-content">
+                        <p><strong>[M3_4_MIN]-[M3_4_MAX]</strong> - YouTube ads begin</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-label">Month 5-6</div>
+                    <div class="timeline-content">
+                        <p><strong>[M5_6_MIN]-[M5_6_MAX]</strong> - Growing audience + sponsorship interest</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-label">Month 7-12</div>
+                    <div class="timeline-content">
+                        <p><strong>[M7_12_MIN]-[M7_12_MAX]/month</strong> - Multiple sponsors, established podcast</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-label">Year 1 Total</div>
+                    <div class="timeline-content">
+                        <p><strong>[YEAR1_TOTAL_MIN]-[YEAR1_TOTAL_MAX]</strong> - Your earnings</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Year 2 Projection</h3>
+            <div class="highlight-box">
+                <p><strong>Realistic:</strong> [YEAR2_MONTHLY_MIN]-[YEAR2_MONTHLY_MAX]/month (passive income)</p>
+                <p><strong>Annual:</strong> [YEAR2_ANNUAL_MIN]-[YEAR2_ANNUAL_MAX] lakhs</p>
+            </div>
+        </div>
+
+        <!-- Your Role -->
+        <div class="section">
+            <h2>Your Role & Time Commitment</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Time</th>
+                        <th>Frequency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Record Podcast</td>
+                        <td>[RECORD_HOURS] hours</td>
+                        <td>1x/week</td>
+                    </tr>
+                    <tr>
+                        <td>Prep Topics</td>
+                        <td>[PREP_TIME] minutes</td>
+                        <td>1x/week</td>
+                    </tr>
+                    <tr>
+                        <td>Review Clips</td>
+                        <td>[REVIEW_TIME] minutes</td>
+                        <td>1x/week</td>
+                    </tr>
+                    <tr>
+                        <td>Social Engagement</td>
+                        <td>[SOCIAL_TIME] minutes</td>
+                        <td>[SOCIAL_FREQ]x/week</td>
+                    </tr>
+                    <tr style="background: var(--color-teal-500); color: white;">
+                        <td><strong>TOTAL</strong></td>
+                        <td><strong>[TOTAL_HOURS_MIN]-[TOTAL_HOURS_MAX] hours</strong></td>
+                        <td><strong>Per week</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: var(--space-16);"><em>Context: This is LESS than a single college course ([COLLEGE_HOURS_MIN]-[COLLEGE_HOURS_MAX] hrs/week)</em></p>
+
+            <h3>What I Handle</h3>
+            <ul class="checklist">
+                <li>All editing and production</li>
+                <li>All uploading to platforms</li>
+                <li>All social media clips and promotion</li>
+                <li>All sponsorships and business</li>
+                <li>All technical setup and troubleshooting</li>
+            </ul>
+        </div>
+
+        <!-- Timeline -->
+        <div class="section" id="timeline">
+            <h2>Success Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-label">Week 1-2</div>
+                    <div class="timeline-content">
+                        <p><strong>Finalize agreement</strong> - Buy equipment, set up platform</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-label">Week 3-4</div>
+                    <div class="timeline-content">
+                        <p><strong>Record first 3 episodes</strong> - Build buffer for consistent releases</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-label">Week 4-5</div>
+                    <div class="timeline-content">
+                        <p><strong>Upload and launch</strong> - Go public, start promotion</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-label">Month 2-3</div>
+                    <div class="timeline-content">
+                        <p><strong>Release 1 episode/week</strong> - Build audience, Target: 300-800 listeners/episode</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-label">Month 4-6</div>
+                    <div class="timeline-content">
+                        <p><strong>Growth Phase</strong> - YouTube monetization kicks in, sponsorship interest starts</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-label">Month 7-12</div>
+                    <div class="timeline-content">
+                        <p><strong>Scale Phase</strong> - Multiple sponsors, established audience, Target: 5k-10k listeners/episode</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Year 1 Milestones</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Episodes Published</td>
+                        <td>48</td>
+                    </tr>
+                    <tr>
+                        <td>Listeners Per Episode</td>
+                        <td>5,000-10,000</td>
+                    </tr>
+                    <tr>
+                        <td>YouTube Subscribers</td>
+                        <td>2,000-5,000</td>
+                    </tr>
+                    <tr>
+                        <td>Monthly Revenue</td>
+                        <td>₹5,000-15,000</td>
+                    </tr>
+                    <tr>
+                        <td>Year 1 Total</td>
+                        <td>₹40,000-₹1.5L</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- College & Equipment -->
+        <div class="section">
+            <h2>College Permissions & Setup</h2>
+            <h3>Will VIT Approve?</h3>
+            <div class="highlight-box">
+                <p><strong>Short Answer: Yes (99% sure)</strong></p>
+                <p>Colleges actively encourage public engagement. You just email your PhD advisor: "I'm starting a podcast on Queer Studies. Won't interfere with PhD work."</p>
+                <p><strong>Expected response:</strong> "Great! Go ahead."</p>
+                <p><strong>Reality:</strong> Professors do this all the time.</p>
+            </div>
+
+            <h3>Equipment (One-Time: ₹5-10k)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Cost</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>USB Microphone (Audio-Technica AT2020)</td>
+                        <td>[MIC_COST]</td>
+                        <td>Crystal clear audio</td>
+                    </tr>
+                    <tr>
+                        <td>Pop Filter</td>
+                        <td>[FILTER_COST]</td>
+                        <td>Prevent plosive sounds</td>
+                    </tr>
+                    <tr>
+                        <td>XLR Cable</td>
+                        <td>[CABLE_COST]</td>
+                        <td>Connections</td>
+                    </tr>
+                    <tr>
+                        <td>Audio Interface (optional)</td>
+                        <td>[INTERFACE_COST]</td>
+                        <td>More professional sound</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: var(--space-16);"><strong>Software:</strong> All free (Audacity for recording, Anchor for hosting)</p>
+        </div>
+
+        <!-- Why This Works -->
+        <div class="section">
+            <h2>Why This Partnership Works</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Creative Control</td>
+                        <td>You decide topics, guests, direction</td>
+                    </tr>
+                    <tr>
+                        <td>Revenue Fair</td>
+                        <td>[CREATOR_SHARE] you, [BUSINESS_SHARE] me (for distribution)</td>
+                    </tr>
+                    <tr>
+                        <td>Low Risk</td>
+                        <td>You can pause/stop anytime, no penalty</td>
+                    </tr>
+                    <tr>
+                        <td>No Exclusivity</td>
+                        <td>Keep your PhD, teaching, everything else</td>
+                    </tr>
+                    <tr>
+                        <td>Time Flexible</td>
+                        <td>5-8 hrs/week fits alongside PhD</td>
+                    </tr>
+                    <tr>
+                        <td>Mutual Benefit</td>
+                        <td>I get credible content; you get reach + income</td>
+                    </tr>
+                    <tr>
+                        <td>Your Asset</td>
+                        <td>Episodes are yours forever</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- FAQ -->
+        <div class="section" id="faq">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What exactly are reels?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>[REEL_MIN]-[REEL_MAX] second video clips from your podcast that drive traffic to full episodes. You record [RECORD_DURATION]-hour podcast → I extract [CLIPS_MIN]-[CLIPS_MAX] best moments → I create short clips (reels) → Post on Instagram/YouTube Shorts → People discover you → listen to full episode → YouTube pays us for views.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do I actually make money?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Multiple streams: YouTube ads (immediate, Month 3+), sponsorships (Month 6+), Patreon (optional, Month 9+), digital products (whenever). You'll earn money from day 1 of monetization onwards.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Will this interfere with my PhD?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No. 5-8 hrs/week is less than one college course. It's actually a creative outlet that helps break thesis monotony. You can pause anytime if workload gets heavy.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Will college have a problem?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No. They encourage public engagement. Just email your advisor saying you're starting a podcast. They'll approve. 99% of professors do side projects.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Why me specifically?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Your niche expertise (Queer Studies) + rare voice (system analysis) + perfect timing + relatable authenticity. You could literally own the Queer Studies podcast space in India.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What if it doesn't grow?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Even 500 listeners = ₹500/month income. Plus you build resume credentials, create community, and have archive of your intellectual work. That's not failure—that's successful side project.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Am I being exploited?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No. You keep 70% of ad revenue, 60-75% of sponsorships. I take percentage for distribution and business management. That's a fair split for infrastructure you don't have to build.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Invitation -->
+        <div class="section mt-32 text-center">
+            <h2>The Invitation</h2>
+            <p style="font-size: var(--font-size-lg); line-height: 1.8; max-width: 700px; margin: 0 auto;">
+                Right now, your brilliant ideas are confined to classrooms.<br><br>
+                A podcast changes that.<br><br>
+                Your voice reaches thousands of people every month.<br>
+                Your ideas shape conversations.<br>
+                You get paid for work you're already doing.<br><br>
+                <strong>I handle the infrastructure. You bring the brilliance.</strong><br><br>
+                <em>That's worth having a conversation about.</em>
+            </p>
+        </div>
+
+        <!-- Next Steps -->
+        <div class="section mt-32 text-center">
+            <h2>Next Steps</h2>
+            <button class="cta-button" style="background: var(--color-teal-500); color: white; margin: var(--space-16);">Let's Talk</button>
+            <p>Duration: 30-45 minutes | Format: Coffee, call, or in-person</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Between Theory & Glitters</strong></p>
+        <p>A Podcast Opportunity from Rev's Marketing</p>
+        <p style="margin-top: var(--space-20); font-size: var(--font-size-base);">Designed to amplify Abarna's voice and reach people who need to hear it.</p>
+        <p style="margin-top: var(--space-16); opacity: 0.8;">© 2025 Rev's Marketing | <a href="#opportunity">Contact</a></p>
+    </footer>
+
+    <script>
+        // Smooth navigation link highlighting
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        // Open first FAQ item by default
+        if (faqItems.length > 0) {
+            faqItems[0].classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
+---
