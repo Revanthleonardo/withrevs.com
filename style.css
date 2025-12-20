@@ -396,7 +396,7 @@ main {
 
 /* Page section that holds the form card */
 .lead-form-section {
-  min-height: 100vh;          /* full screen height */
+  min-height: 50vh;          /* full screen height */
   display: flex;
   align-items: center;        /* vertical center */
   justify-content: center;    /* horizontal center */
@@ -404,6 +404,6 @@ main {
 
 /* Optional: limit card width */
 .lead-form-card {
-  max-width: 900px;
+  max-width: 50vw;
   width: 100%;
 }
