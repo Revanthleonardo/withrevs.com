@@ -393,3 +393,17 @@ main {
     border-radius: 20px;
   }
 }
+
+/* Page section that holds the form card */
+.lead-form-section {
+  min-height: 100vh;          /* full screen height */
+  display: flex;
+  align-items: center;        /* vertical center */
+  justify-content: center;    /* horizontal center */
+}
+
+/* Optional: limit card width */
+.lead-form-card {
+  max-width: 900px;
+  width: 100%;
+}
