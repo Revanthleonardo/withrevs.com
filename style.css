@@ -405,5 +405,6 @@ main {
 /* Optional: limit card width */
 .lead-form-card {
   max-width: 50vw;
-  width: 100%;
+  margin-left: 50%;
+  margin-right: 50%;
 }
