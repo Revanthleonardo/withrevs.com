@@ -145,19 +145,17 @@
       <p class="section-intro">
         Share your details and get ideas for your first 3 reels on a free call.
       </p>
-      <form class="form" id="leadForm" method="POST" name="contact" data-netlify="true" action="thanks.html" netlify>
+      <form class="form" name="contact" action="https://formspree.io/f/xzdpekjw"
+  method="POST">
         <div class="form-row">
-          <input type="text" id="name" placeholder="Name" class="form-control" required />
-          <input type="text" id="business" placeholder="Business name" class="form-control" required />
+          <input type="text" placeholder="Name" class="form-control" required />
+          <input type="text" placeholder="Business name" class="form-control" required />
         </div>
         <div class="form-row">
-          <input type="text" id="instagram" class="form-control" placeholder="Instagram handle" required/>
-          <input type="text" id="contactInfo" placeholder="WhatsApp or Email" class="form-control" required />
+          <input type="text" class="form-control" placeholder="Instagram handle" required/>
+          <input type="text" placeholder="WhatsApp or Email" class="form-control" />
         </div>
-         <!-- Netlify required hidden field -->
-        <input type="hidden" name="form-name" value="contact" />
         <button type="submit" class="btn primary full">Get my free reel ideas</button>
-        <p class="form-note" id="formMessage"></p>
       </form>
       </div>
     </section>
