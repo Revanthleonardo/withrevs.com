@@ -11,7 +11,7 @@
             --font-family-content: Arial, sans-serif;
             --font-weight-content: 400;
             --font-size-content: 16px;
-            --line-height-content: 1.4;
+            --line-height-content: 1.6; /* Improved for reading */
         }
         body.theme-dark {
             --color-bg-base: #0f172a;
@@ -25,28 +25,42 @@
             --color-primary: #fbbf24;
             --color-primary-foreground: #0f172a;
         }
+        body.theme-light {
+            --color-bg-base: #ffffff;
+            --color-bg-elevated: #f9f9f9;
+            --color-bg-surface: #ffffff;
+            --color-bg-muted: #f1f5f9;
+            --color-text-primary: #0f172a;
+            --color-text-secondary: #334155;
+            --color-text-muted: #64748b;
+            --color-text-accent: #d97706;
+            --color-primary: #fbbf24;
+            --color-primary-foreground: #0f172a;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: var(--font-family-content);
             font-weight: var(--font-weight-content);
             font-size: var(--font-size-content);
             line-height: var(--line-height-content);
-            overflow-x: hidden;
             background-color: var(--color-bg-base);
             color: var(--color-text-primary);
+            padding: 1rem; /* For mobile */
         }
         .slide {
-            width: 960px;
-            
-            margin: 0 auto 20px;
+            max-width: 960px;
+            width: 100%;
+            min-height: 540px; /* Min for desktop, auto on mobile */
+            height: auto;
+            margin: 0 auto 2rem;
             display: flex;
-            flex-shrink: 0;
             position: relative;
             overflow: hidden;
             background-color: var(--color-bg-surface);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px; /* Softer edges */
         }
-        .row { flex-direction: row; }
+        .row { flex-direction: row; flex-wrap: wrap; } /* Wrap for mobile */
         .col { flex-direction: column; }
         .center { justify-content: center; align-items: center; text-align: center; }
         .space-between { justify-content: space-between; }
@@ -77,14 +91,14 @@
             margin: 0;
             color: var(--color-text-accent);
         }
-        h1 { font-size: 3rem; }
-        h2 { font-size: 2.25rem; }
-        h3 { font-size: 1.75rem; }
-        h4 { font-size: 1.5rem; }
-        .text-6xl { font-size: 3.75rem; }
-        .text-5xl { font-size: 3rem; }
-        .text-4xl { font-size: 2.25rem; }
-        .text-3xl { font-size: 1.875rem; }
+        h1 { font-size: 2.5rem; } /* Smaller on mobile via media */
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        .text-6xl { font-size: 2.5rem; } /* Adjusted */
+        .text-5xl { font-size: 2.25rem; }
+        .text-4xl { font-size: 2rem; }
+        .text-3xl { font-size: 1.75rem; }
         .text-2xl { font-size: 1.5rem; }
         .text-xl { font-size: 1.25rem; }
         .text-lg { font-size: 1.125rem; }
@@ -95,21 +109,40 @@
         .font-normal { font-weight: 400; }
         .text-center { text-align: center; }
         .text-left { text-align: left; }
-        ul, ol { margin-left: 2rem; line-height: 1.8; color: var(--color-text-secondary); }
+        ul, ol { margin-left: 1.5rem; line-height: 1.8; color: var(--color-text-secondary); }
         ul li { list-style: disc; }
         li { margin-bottom: 0.75rem; }
         li:last-child { margin-bottom: 0; }
-        table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; overflow-x: auto; display: block; }
         th, td { border: 1px solid var(--color-bg-muted); padding: 0.6rem; text-align: left; }
         th { background-color: var(--color-bg-elevated); color: var(--color-text-accent); }
+        /* Toggle Button */
+        .mode-toggle { position: fixed; top: 1rem; right: 1rem; z-index: 1000; padding: 0.5rem 1rem; background-color: var(--color-bg-muted); color: var(--color-text-primary); border: none; cursor: pointer; border-radius: 4px; }
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            body { font-size: 14px; } /* Smaller base font */
+            .slide { min-height: auto; padding: 1rem; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            table { font-size: 0.85rem; }
+            .p-16 { padding: 2rem; } /* Reduce padding on mobile */
+            .p-12 { padding: 1.5rem; }
+            ul, ol { margin-left: 1rem; }
+        }
+        @media (max-width: 480px) {
+            body { font-size: 12px; }
+            .slide { margin-bottom: 1rem; }
+            .text-6xl { font-size: 1.8rem; }
+        }
     </style>
 </head>
 <body class="theme-dark">
+    <button class="mode-toggle" onclick="toggleMode()">Toggle Mode</button>
 
     <!-- SLIDE 1: Title -->
     <section class="slide p-16 col center">
         <h1 class="text-6xl mb-6">Rev's Sphere</h1>
-        <h2 class="text-3xl mb-4">Business Plan with Detailed Setup Costs - 2026</h2>
+        <h2 class="text-3xl mb-4">Updated Business Plan with Detailed Setup Costs - 2026</h2>
         <p class="text-xl mb-8">Premier Spiritual Co-Working & Cultural Hub in Pondicherry</p>
         <p class="text-base">Blending Productivity, Community, and Consciousness</p>
     </section>
@@ -181,7 +214,7 @@
         <p class="text-sm mt-4">Additional streams: Events, workshops, upsells (₹50–80k/month extra).</p>
     </section>
 
-    <!-- NEW SLIDE: Detailed Setup Costs (for Bank Reference) -->
+    <!-- SLIDE 6: Detailed Setup Costs -->
     <section class="slide p-12 col">
         <h2 class="mb-6 text-center">Detailed Setup Cost Breakdown (4,000 Sqft Space)</h2>
         <p class="text-base mb-4 text-center">Estimated one-time capital required for launch in Pondicherry (near Auroville) – 2026 market rates.</p>
@@ -206,7 +239,7 @@
         <p class="text-sm mt-4 text-center">Costs based on Tamil Nadu/Pondicherry market (bulk modular furniture, leased shell space). Adjust for actual quotes/vendor negotiations.</p>
     </section>
 
-    <!-- SLIDE 7: Why Rev's Sphere Succeeds -->
+    <!-- SLIDE 7: Key Strengths -->
     <section class="slide p-16 col">
         <h2 class="mb-6">Key Strengths</h2>
         <ul class="text-lg">
@@ -218,7 +251,7 @@
         </ul>
     </section>
 
-    <!-- SLIDE 8: Timeline -->
+    <!-- SLIDE 8: Launch Timeline -->
     <section class="slide p-16 col">
         <h2 class="mb-6">Launch Timeline</h2>
         <ul class="text-lg">
@@ -239,5 +272,17 @@
         <p class="text-sm">Contact: Revanth Mohan • revanthleonardo@gmail.com • +91-8183383393</p>
     </section>
 
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('theme-dark');
+            document.body.classList.toggle('theme-light');
+            localStorage.setItem('theme', document.body.classList.contains('theme-light') ? 'light' : 'dark');
+        }
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.body.classList.remove('theme-dark');
+            document.body.classList.add('theme-light');
+        }
+    </script>
 </body>
 </html>
