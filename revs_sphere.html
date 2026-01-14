@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rev's Sphere - Updated Business Plan 2026</title>
+    <title>Rev's Sphere 2026</title>
     <style>
-        /* Theme Variables */
         :root {
             --font-family-display: Arial, sans-serif;
             --font-weight-display: 600;
@@ -14,8 +13,6 @@
             --font-size-content: 16px;
             --line-height-content: 1.4;
         }
-
-        /* DARK THEME */
         body.theme-dark {
             --color-bg-base: #0f172a;
             --color-bg-elevated: #020617;
@@ -28,14 +25,7 @@
             --color-primary: #fbbf24;
             --color-primary-foreground: #0f172a;
         }
-
-        /* Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: var(--font-family-content);
             font-weight: var(--font-weight-content);
@@ -45,8 +35,6 @@
             background-color: var(--color-bg-base);
             color: var(--color-text-primary);
         }
-
-        /* Slide Container */
         .slide {
             width: 960px;
             height: 540px;
@@ -58,43 +46,30 @@
             background-color: var(--color-bg-surface);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        /* Layout Utilities */
         .row { flex-direction: row; }
         .col { flex-direction: column; }
-        .center {
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+        .center { justify-content: center; align-items: center; text-align: center; }
         .space-between { justify-content: space-between; }
         .items-center { align-items: center; }
         .items-start { align-items: flex-start; }
         .fill-width { flex: 1; }
         .fill-height { flex: 1; display: flex; flex-direction: column; }
-
-        /* Spacing */
         .gap-md { gap: 1rem; }
         .gap-lg { gap: 1.5rem; }
         .gap-xl { gap: 2rem; }
-
         .p-4 { padding: 1rem; }
         .p-6 { padding: 1.5rem; }
         .p-8 { padding: 2rem; }
         .p-12 { padding: 3rem; }
         .p-16 { padding: 4rem; }
-
         .mb-2 { margin-bottom: 0.5rem; }
         .mb-4 { margin-bottom: 1rem; }
         .mb-6 { margin-bottom: 1.5rem; }
         .mb-8 { margin-bottom: 2rem; }
-
         .mt-2 { margin-top: 0.5rem; }
         .mt-4 { margin-top: 1rem; }
         .mt-6 { margin-top: 1.5rem; }
         .mt-8 { margin-top: 2rem; }
-
-        /* Typography */
         h1, h2, h3, h4, h5, h6 {
             font-family: var(--font-family-display);
             font-weight: var(--font-weight-display);
@@ -102,12 +77,10 @@
             margin: 0;
             color: var(--color-text-accent);
         }
-
         h1 { font-size: 3rem; }
         h2 { font-size: 2.25rem; }
         h3 { font-size: 1.75rem; }
         h4 { font-size: 1.5rem; }
-
         .text-6xl { font-size: 3.75rem; }
         .text-5xl { font-size: 3rem; }
         .text-4xl { font-size: 2.25rem; }
@@ -117,246 +90,128 @@
         .text-lg { font-size: 1.125rem; }
         .text-base { font-size: 1rem; }
         .text-sm { font-size: 0.875rem; }
-
         .font-bold { font-weight: 700; }
         .font-semibold { font-weight: 600; }
         .font-normal { font-weight: 400; }
-
         .text-center { text-align: center; }
         .text-left { text-align: left; }
-
-        /* Lists */
-        ul, ol {
-            margin-left: 2rem;
-            line-height: 1.8;
-            color: var(--color-text-secondary);
-        }
-
+        ul, ol { margin-left: 2rem; line-height: 1.8; color: var(--color-text-secondary); }
         ul li { list-style: disc; }
         li { margin-bottom: 0.75rem; }
         li:last-child { margin-bottom: 0; }
-
-        /* Card Styles */
-        .card-rect {
-            padding: 2rem;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            background-color: var(--color-bg-muted);
-        }
-
-        .stat-box {
-            text-align: center;
-            padding: 1.5rem;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            background-color: var(--color-bg-muted);
-        }
-
-        .stat-box .number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--color-text-accent);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-box .label {
-            font-size: 0.875rem;
-            color: var(--color-text-muted);
-        }
-
-        /* Table Styles */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-        }
-
-        th, td {
-            border: 1px solid var(--color-bg-muted);
-            padding: 0.75rem;
-            text-align: left;
-        }
-
-        th {
-            background-color: var(--color-bg-elevated);
-            color: var(--color-text-accent);
-        }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th, td { border: 1px solid var(--color-bg-muted); padding: 0.75rem; text-align: left; }
+        th { background-color: var(--color-bg-elevated); color: var(--color-text-accent); }
     </style>
 </head>
 <body class="theme-dark">
 
-    <!-- SLIDE 1: Title Slide -->
+    <!-- SLIDE 1: Title -->
     <section class="slide p-16 col center">
         <h1 class="text-6xl mb-6">Rev's Sphere</h1>
         <h2 class="text-3xl mb-4">Updated Business Plan - January 2026</h2>
-        <p class="text-xl mb-8">A Premier Co-Working & Cultural Hub in Pondicherry</p>
-        <p class="text-base">Presented by Revanth Mohan</p>
-        <p class="text-sm mt-4">Funding Goal: ₹75,000 Initial Loan (Oxyzo Approved)</p>
+        <p class="text-xl mb-8">Premier Spiritual Co-Working & Cultural Hub in Pondicherry</p>
+        <p class="text-base">Blending Productivity, Community, and Consciousness</p>
     </section>
 
-    <!-- SLIDE 2: Vision & Concept Update -->
+    <!-- SLIDE 2: Concept & Vision -->
     <section class="slide p-16 col">
-        <h2 class="mb-6">Updated Vision: Rev's Sphere</h2>
-        <p class="text-lg mb-4">Evolving from a spherical cultural center to a 4,000 sqft co-working space with spiritual alignment in Pondicherry (near Auroville).</p>
+        <h2 class="mb-6">Vision: Rev's Sphere</h2>
+        <p class="text-lg mb-4">A 4,000 sqft dedicated co-working space aligned with spiritual growth in Pondicherry (near Auroville ecosystem).</p>
         <ul class="text-base">
-            <li>Blends productivity, community, and consciousness work</li>
-            <li>43 dedicated workspaces for individuals/groups</li>
-            <li>Each user allocated 20+ sqft for comfort</li>
-            <li>Facilities: Reception, restrooms, lockers, lounge, operations room, stock room</li>
-            <li>Target: Seekers, freelancers, startups in wellness/tech</li>
+            <li>Designed for seekers, freelancers, wellness professionals, and conscious startups</li>
+            <li>43 individual workspaces with 20+ sqft per person for comfort & focus</li>
+            <li>Includes: Reception, lounge area, restrooms, secure lockers, operations room, stock room</li>
+            <li>Flexible for daily work, meditation sessions, small events, and networking</li>
         </ul>
     </section>
 
-    <!-- SLIDE 3: Space Layout & Capacity -->
+    <!-- SLIDE 3: Optimized Layout -->
     <section class="slide p-16 col">
-        <h2 class="mb-6">Space Layout: 4,000 Sqft Optimized</h2>
-        <p class="text-lg mb-4">Efficient design for maximum utility and flow.</p>
+        <h2 class="mb-6">4,000 Sqft Layout Breakdown</h2>
+        <p class="text-lg mb-4">Efficient, flowing design prioritizing productivity and peace.</p>
         <table>
             <thead>
                 <tr>
                     <th>Area</th>
-                    <th>Sqft Allocation</th>
-                    <th>Description</th>
+                    <th>Approx. Sqft</th>
+                    <th>Purpose</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Workspaces</td>
-                    <td>2,000 sqft</td>
-                    <td>43 stations @ 20+ sqft/person; flexible desks</td>
-                </tr>
-                <tr>
-                    <td>Reception & Lounge</td>
-                    <td>800 sqft</td>
-                    <td>Welcome area, casual seating for breaks/networking</td>
-                </tr>
-                <tr>
-                    <td>Restrooms & Lockers</td>
-                    <td>400 sqft</td>
-                    <td>Modern facilities, secure storage</td>
-                </tr>
-                <tr>
-                    <td>Operations & Stock Room</td>
-                    <td>800 sqft</td>
-                    <td>Admin office, inventory for events/supplies</td>
-                </tr>
+                <tr><td>Main Workspaces</td><td>2,000</td><td>43 dedicated stations @ 20+ sqft each; ergonomic desks & natural light</td></tr>
+                <tr><td>Reception + Lounge</td><td>800</td><td>Welcome, casual networking, relaxation zone with seating</td></tr>
+                <tr><td>Restrooms + Lockers</td><td>400</td><td>Modern hygiene facilities + secure personal storage</td></tr>
+                <tr><td>Operations & Stock Room</td><td>800</td><td>Admin support, inventory for events/supplies, quiet back office</td></tr>
             </tbody>
         </table>
-        <p class="text-sm mt-4">Total: 4,000 sqft - Scalable for events/meditation sessions.</p>
+        <p class="text-sm mt-4">Total: 4,000 sqft – Versatile for daily co-working or occasional group sessions.</p>
     </section>
 
-    <!-- SLIDE 4: Pricing Model Update -->
+    <!-- SLIDE 4: Pricing Model -->
     <section class="slide p-16 col">
-        <h2 class="mb-6">Pricing: Per Sqft & Per Person</h2>
-        <p class="text-lg mb-4">Competitive rates aligned with Pondicherry market (₹50-150/sqft/month for co-working).</p>
+        <h2 class="mb-6">Pricing Structure</h2>
+        <p class="text-lg mb-4">Affordable yet premium, reflecting spiritual & productive value in Pondicherry market.</p>
         <ul class="text-base">
-            <li>Base Charge: Above ₹4,000/month per person (includes 20 sqft)</li>
-            <li>Per Sqft Rate: ₹200/sqft/month (above market for premium spiritual vibe)</li>
-            <li>Additional Sqft: ₹200/sqft for extras (e.g., private pods)</li>
-            <li>Tiers: Day Pass (₹500), Weekly (₹2,500), Monthly (₹4,500+)</li>
-            <li>Upsells: Event hosting, lockers (₹500/month), lounge access</li>
+            <li>Base Monthly Membership: Above ₹4,000 per person (includes 20 sqft dedicated space)</li>
+            <li>Per Sqft Rate (for extras): ₹200/sqft/month (e.g., additional private area or storage)</li>
+            <li>Flexible Options: Day Pass ₹500, Weekly ₹2,500, Monthly ₹4,500+</li>
+            <li>Upsells: Locker access ₹500/month, event hosting, lounge priority</li>
         </ul>
-        <p class="text-sm mt-4">Assumes 70% occupancy for projections.</p>
+        <p class="text-sm mt-4">Competitive with local co-working trends; targets 70%+ occupancy for strong revenue.</p>
     </section>
 
     <!-- SLIDE 5: Revenue Projections -->
     <section class="slide p-16 col">
-        <h2 class="mb-6">Revenue Model: Year 1 Projections</h2>
+        <h2 class="mb-6">Year 1 Revenue Model</h2>
         <div class="row gap-lg fill-height">
             <div class="stat-box fill-width">
-                <div class="number">₹2.4L</div>
-                <div class="label">Monthly Revenue (43 users @ ₹4,500 avg)</div>
+                <div class="number">₹1.9–2.4L</div>
+                <div class="label">Monthly (43 seats @ ₹4,500 avg, 70–90% occupancy)</div>
             </div>
             <div class="stat-box fill-width">
-                <div class="number">₹28.8L</div>
-                <div class="label">Annual Revenue (70% occupancy)</div>
+                <div class="number">₹23–29L</div>
+                <div class="label">Annual (core memberships)</div>
             </div>
             <div class="stat-box fill-width">
-                <div class="number">250%</div>
-                <div class="label">ROI (Break-even in 4 months)</div>
+                <div class="number">250%+</div>
+                <div class="label">Potential ROI (quick break-even via high demand)</div>
             </div>
         </div>
-        <p class="text-sm mt-4">Additional: Events (₹50k/month), Upsells (₹30k/month).</p>
+        <p class="text-sm mt-4">Additional streams: Events, workshops, upsells (₹50–80k/month extra).</p>
     </section>
 
-    <!-- SLIDE 6: Cost Breakdown Update -->
+    <!-- SLIDE 6: Why Rev's Sphere Succeeds -->
     <section class="slide p-16 col">
-        <h2 class="mb-6">Initial & Operating Costs</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Amount (₹)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Setup (Furniture, Renovation for 4,000 sqft)</td>
-                    <td>10L</td>
-                </tr>
-                <tr>
-                    <td>Lease/Rent (Pondy Location)</td>
-                    <td>5L/year</td>
-                </tr>
-                <tr>
-                    <td>Utilities & Maintenance</td>
-                    <td>50k/month</td>
-                </tr>
-                <tr>
-                    <td>Staff (Operations, Reception)</td>
-                    <td>1L/month</td>
-                </tr>
-                <tr>
-                    <td>Initial Loan (Oxyzo ₹75k @ 31% interest)</td>
-                    <td>EMI: ₹7,348/12 months</td>
-                </tr>
-            </tbody>
-        </table>
-        <p class="text-sm mt-4">Total Startup: ₹15L (Funded via loan + personal).</p>
-    </section>
-
-    <!-- SLIDE 7: Funding & Financials -->
-    <section class="slide p-16 col">
-        <h2 class="mb-6">Funding Update: Oxyzo Loan</h2>
-        <p class="text-lg mb-4">Secured ₹75,000 personal loan for initial setup.</p>
-        <ul class="text-base">
-            <li>Tenure: 12 months</li>
-            <li>Interest: ~31% (Overdue rate applies if late)</li>
-            <li>EMI: ₹7,348/month (from calculations)</li>
-            <li>Income: ₹30,000/month (Self-Employed)</li>
-            <li>Next: Seek ₹10L business loan post-GST</li>
-        </ul>
-        <p class="text-sm mt-4">ROI: 250%+ with updated model.</p>
-    </section>
-
-    <!-- SLIDE 8: Why This Works -->
-    <section class="slide p-16 col">
-        <h2 class="mb-6">Why Rev's Sphere Succeeds</h2>
+        <h2 class="mb-6">Key Strengths</h2>
         <ul class="text-lg">
-            <li><strong>✓ Prime Location</strong> - Pondy/Auroville seeker community</li>
-            <li><strong>✓ Flexible Pricing</strong> - ₹4,000+ per person/month drives revenue</li>
-            <li><strong>✓ Capacity Optimized</strong> - 43 users in 4,000 sqft with amenities</li>
-            <li><strong>✓ Low Overhead</strong> - Break-even quick with ₹2.4L/month</li>
-            <li><strong>✓ Scalable</strong> - Expand to events/co-living</li>
+            <li><strong>Unique Positioning</strong> – Spiritual + productive hub in Auroville seeker community</li>
+            <li><strong>Optimized Capacity</strong> – 43 comfortable stations in 4,000 sqft</li>
+            <li><strong>Strong Pricing</strong> – Above ₹4,000/person drives healthy margins</li>
+            <li><strong>Low Overhead Potential</strong> – Pondicherry location keeps costs manageable</li>
+            <li><strong>Scalable</strong> – Expand to events, retreats, or network locations</li>
         </ul>
     </section>
 
-    <!-- SLIDE 9: Timeline & Next Steps -->
+    <!-- SLIDE 7: Timeline -->
     <section class="slide p-16 col">
-        <h2 class="mb-6">Implementation Timeline</h2>
+        <h2 class="mb-6">Launch Timeline</h2>
         <ul class="text-lg">
-            <li><strong>Q1 2026:</strong> Secure space, GST, setup (Use ₹75k loan)</li>
-            <li><strong>Q2 2026:</strong> Renovate 4,000 sqft, install facilities</li>
-            <li><strong>Q3 2026:</strong> Launch with 43 workspaces, marketing</li>
-            <li><strong>Q4 2026:</strong> Achieve 70% occupancy, scale revenue</li>
+            <li><strong>Q1 2026:</strong> Finalize 4,000 sqft space, GST, basic setup</li>
+            <li><strong>Q2 2026:</strong> Renovate interiors, install workstations & amenities</li>
+            <li><strong>Q3 2026:</strong> Soft launch, community marketing, fill initial seats</li>
+            <li><strong>Q4 2026:</strong> Full operations, target 70%+ occupancy</li>
         </ul>
     </section>
 
-    <!-- SLIDE 10: Call to Action -->
+    <!-- SLIDE 8: Call to Action -->
     <section class="slide p-16 col center">
-        <h1 class="text-5xl mb-6">Join Rev's Sphere</h1>
-        <p class="text-xl mb-4">Invest in Pondy's Next Cultural Co-Working Hub</p>
-        <p class="text-lg mb-8">Partners & Users Welcome</p>
-        <p class="text-base">🕉️ Productivity Elevated • Community Thrives ✨</p>
-        <p class="text-sm mt-8">Contact: Revanth Mohan • revanthleonardo@gmail.com • +91-8183383393</p>
+        <h1 class="text-5xl mb-6">Join the Sphere</h1>
+        <p class="text-xl mb-4">Build & Experience Pondichery's Conscious Co-Working Future</p>
+        <p class="text-lg mb-8">Members, Partners, Facilitators Welcome</p>
+        <p class="text-base">🕉️ Elevate Work • Nurture Spirit ✨</p>
+        <p class="text-sm mt-8">Rev's Sphere • Pondicherry/Auroville • Launch 2026</p>
+        <p class="text-sm">Contact: Revanth Mohan • revanthleonardo@gmail.com • +91-8183383393</p>
     </section>
 
 </body>
