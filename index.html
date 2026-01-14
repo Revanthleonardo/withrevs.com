@@ -145,7 +145,7 @@
       <p class="section-intro">
         Share your details and get ideas for your first 3 reels on a free call.
       </p>
-      <form class="form" id="reels-form">
+      <form class="form"  action="mailto:withrevs@icloud.com" method="POST" enctype="text/plain">
         <div class="form-row">
           <input type="text" placeholder="Name" class="form-control" required />
           <input type="text" placeholder="Business name" class="form-control" required />
@@ -191,40 +191,6 @@
     window.addEventListener("touchstart", enableAudioOnce, { once: true });
 
   </script>
-  <script>
-  const form = document.getElementById("reels-form");
-  const status = document.getElementById("form-status");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const data = {
-      name: form.name.value,
-      business: form.business.value,
-      instagram: form.instagram.value,
-      contact: form.contact.value,
-    };
-
-    try {
-      const res = await fetch("https://formspree.io/f/xzdpekjw", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (res.ok) {
-        status.textContent = "Thanks! We'll be in touch.";
-        form.reset();
-      } else {
-        status.textContent = "There was a problem submitting the form.";
-      }
-    } catch (err) {
-      status.textContent = "Network error. Please try again.";
-    }
-  });
-</script>
+  
 </body>
 </html>
